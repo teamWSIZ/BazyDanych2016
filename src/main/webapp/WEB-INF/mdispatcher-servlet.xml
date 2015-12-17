@@ -1,0 +1,47 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/mvc
+                http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                http://www.springframework.org/schema/data/jpa
+                http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd">
+
+    <context:component-scan base-package="WebController, Domain"/>
+
+    <!-- Beany są definiowane tutaj; odpowiednik spring-context.xml,
+            ładowanego przez ClassPathXmlApplicationContext-->
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- Potrzebne by był dostęp do lokalnych css-ów, js-ów itp -->
+    <mvc:resources mapping="/myresources/**" location="/myresources/"/>
+    <mvc:annotation-driven />
+
+    <!--JPA -->
+    <!-- Tworzy Beany dla interfejsów typu CrudRepository -->
+    <jpa:repositories base-package="Domain"
+                      entity-manager-factory-ref="entityManagerFactory0">
+    </jpa:repositories>
+
+    <!-- Bean dający EntityManager-a dla PersistenceUnit=student (w resources/META-INF/persistence.xml-->
+    <bean id="entityManagerFactory0"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceUnitName" value="enginetester" />
+    </bean>
+
+    <!-- Transakcyjność... -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory0" />
+    </bean>
+
+</beans>
