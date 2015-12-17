@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SpringWebGithub:war exploded">
-    <output-path>/var/lib/tomcat/webapps/ET</output-path>
+    <output-path>$PROJECT_DIR$/target/SpringWebGithub</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -50,6 +50,8 @@
           <element id="library" level="project" name="Maven: net.java.dev.jna:jna-platform:4.1.0" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.7" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.5" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
         </element>
       </element>
       <element id="directory" name="META-INF">
