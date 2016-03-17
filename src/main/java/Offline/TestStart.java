@@ -1,7 +1,6 @@
 package Offline;
 
-import Domain.Ttt;
-import Domain.TttRe;
+import Domain.PizzaRe;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,10 +11,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestStart {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("offline-config.xml");
-        TttRe repo = ctx.getBean(TttRe.class);
+        PizzaRe repo = ctx.getBean(PizzaRe.class);
         System.out.println(repo.count());
-
-
         ctx.close();
 
     }

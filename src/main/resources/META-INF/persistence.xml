@@ -12,9 +12,9 @@
         <!--<class>Domain</class>-->
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://nuuk:5432/et" />
-            <property name="javax.persistence.jdbc.user" value="et" />
-            <property name="javax.persistence.jdbc.password" value="1234" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://10.10.0.111:5432/student" />
+            <property name="javax.persistence.jdbc.user" value="student" />
+            <property name="javax.persistence.jdbc.password" value="" />
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="false" />

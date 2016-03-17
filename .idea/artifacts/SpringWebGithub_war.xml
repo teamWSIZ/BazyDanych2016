@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="SpringWebGithub:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="SpringWebGithub.war">
+    <root id="archive" name="BazyDanychTemplate.war">
       <element id="artifact" artifact-name="SpringWebGithub:war exploded" />
     </root>
   </artifact>

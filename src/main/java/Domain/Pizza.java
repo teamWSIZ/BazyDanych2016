@@ -13,9 +13,11 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Ttt {
+public class Pizza {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer tttid;
-    String txt;
+    Integer pizzaid;
+    String nazwa;
+    Integer rozmiar;
+    Integer cena;
 }
