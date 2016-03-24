@@ -2,7 +2,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="
                 http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -18,10 +18,10 @@
     <!-- Beany są definiowane tutaj; odpowiednik spring-context.xml,
             ładowanego przez ClassPathXmlApplicationContext-->
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <jpa:repositories base-package="Domain" entity-manager-factory-ref="emFactory">
+    </jpa:repositories>
+
+
 
     <!-- Potrzebne by był dostęp do lokalnych css-ów, js-ów itp -->
     <mvc:resources mapping="/myresources/**" location="/myresources/"/>

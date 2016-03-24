@@ -9,7 +9,10 @@
     <persistence-unit name="enginetester" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Klasy które będą mapowane na tabele baz danych -->
-        <!--<class>Domain</class>-->
+        <class>Domain.Dish</class>
+        <class>Domain.Person</class>
+        <class>Domain.DishOrder</class>
+
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://10.10.0.111:5432/student" />

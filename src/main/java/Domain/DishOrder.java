@@ -1,6 +1,5 @@
 package Domain;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import lombok.Data;
 
 import javax.persistence.Entity;

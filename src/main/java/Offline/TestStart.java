@@ -2,7 +2,6 @@ package Offline;
 
 import Domain.Person;
 import Domain.PersonRe;
-import Domain.PizzaRe;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Random;
