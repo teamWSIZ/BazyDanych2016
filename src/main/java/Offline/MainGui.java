@@ -1,6 +1,5 @@
 package Offline;
 
-import Domain.Dish;
 import Domain.DishRe;
 import Domain.Person;
 import Domain.PersonRe;
@@ -45,7 +44,7 @@ public class MainGui implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         for(Person p : personRe.findAllByOrderByNameAsc()) personCombo.addItem(p);
-        for(Dish d : dishRe.findAllByOrderByNazwaAsc()) dishCombo.addItem(d);
+//        for(Dish d : dishRe.findAllByOrderByNazwaAsc()) dishCombo.addItem(d);
     }
 
     public static void main(String[] args) {
