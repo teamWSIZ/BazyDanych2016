@@ -20,4 +20,5 @@ public class Pizza {
     String nazwa;
     Integer rozmiar;
     Integer cena;
+
 }
