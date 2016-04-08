@@ -1,2 +1,3 @@
-# SpringWeb
-Projekt do rozwoju aplikacji Java Spring, z kontrolerem REST i dostępem do danych przez JPA
+# BazyDanych2016
+
+Projekt do kursu "Bazy Danych" WSIZ w semestrze letnim 2016
