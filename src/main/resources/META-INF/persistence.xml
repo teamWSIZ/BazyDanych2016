@@ -12,6 +12,8 @@
         <class>Domain.Dish</class>
         <class>Domain.Person</class>
         <class>Domain.DishOrder</class>
+        <class>Domain.Ingredient</class>
+        <class>Domain.DishIngredients</class>
 
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
