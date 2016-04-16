@@ -9,6 +9,7 @@ Do sprawdzenia:
 - dodać telefon do osoby
 - data zamówienia (timestamp)
 - data zrealizowania
+
 @Temporal(TemporalType.TIMESTAMP)
 Date momentDopuszczenia;    //można
 

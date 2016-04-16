@@ -23,8 +23,8 @@
       <schema id="5" parent="2" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>188488</introspection-state-number>
-        <introspection-timestamp>2016-04-16.09:06:19.266</introspection-timestamp>
+        <introspection-state-number>188490</introspection-state-number>
+        <introspection-timestamp>2016-04-16.09:13:03.131</introspection-timestamp>
       </schema>
       <sequence id="6" parent="3" name="ttt_tttid_seq">
         <object-id>46345</object-id>
@@ -20012,7 +20012,7 @@
       </table>
       <table id="3556" parent="5" name="dishorder">
         <object-id>46870</object-id>
-        <state-number>182274</state-number>
+        <state-number>188490</state-number>
       </table>
       <table id="3557" parent="5" name="halt">
         <object-id>46624</object-id>
@@ -56104,186 +56104,192 @@ umserver</columns>
         <state-number>182268</state-number>
         <data-type>boolean</data-type>
       </column>
-      <index id="12415" parent="3556" name="dishorder_pkey">
+      <column id="12415" parent="3556" name="datazamowienia">
+        <state-number>188490</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="12416" parent="3556" name="dishorder_pkey">
         <object-id>46874</object-id>
         <columns>orderid</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="12416" parent="3556" name="dishorder_pkey">
+      <key id="12417" parent="3556" name="dishorder_pkey">
         <columns>orderid</columns>
         <underlying-index>dishorder_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <foreign-key id="12417" parent="3556" name="dishorder_dishid_fkey">
+      <foreign-key id="12418" parent="3556" name="dishorder_dishid_fkey">
         <columns>dishid</columns>
+        <ref-key>~.dish.dish_pkey</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="12418" parent="3556" name="dishorder_personid_fkey">
+      <foreign-key id="12419" parent="3556" name="dishorder_personid_fkey">
         <columns>personid</columns>
+        <ref-key>~.person.person_pkey</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="12419" parent="3557" name="haltid">
+      <column id="12420" parent="3557" name="haltid">
         <state-number>129370</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;halt_haltid_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="12420" parent="3557" name="ulicaid">
+      <column id="12421" parent="3557" name="ulicaid">
         <state-number>129371</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="12421" parent="3557" name="name">
+      <column id="12422" parent="3557" name="name">
         <state-number>129370</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="12422" parent="3557" name="x">
+      <column id="12423" parent="3557" name="x">
         <state-number>129403</state-number>
         <data-type>double precision</data-type>
         <default-expression>0</default-expression>
       </column>
-      <column id="12423" parent="3557" name="y">
+      <column id="12424" parent="3557" name="y">
         <state-number>129404</state-number>
         <data-type>double precision</data-type>
         <default-expression>0</default-expression>
       </column>
-      <index id="12424" parent="3557" name="halt_pkey">
+      <index id="12425" parent="3557" name="halt_pkey">
         <object-id>46631</object-id>
         <columns>haltid</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="12425" parent="3557" name="halt_pkey">
+      <key id="12426" parent="3557" name="halt_pkey">
         <columns>haltid</columns>
         <underlying-index>halt_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="12426" parent="3558" name="kid">
+      <column id="12427" parent="3558" name="kid">
         <state-number>127853</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;ksiazka_kid_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="12427" parent="3558" name="autor">
+      <column id="12428" parent="3558" name="autor">
         <state-number>127853</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="12428" parent="3558" name="tytul">
+      <column id="12429" parent="3558" name="tytul">
         <state-number>127853</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="12429" parent="3559" name="logzamowienid">
+      <column id="12430" parent="3559" name="logzamowienid">
         <state-number>188475</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;logzamowien_logzamowienid_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="12430" parent="3559" name="zamawiajacyid">
+      <column id="12431" parent="3559" name="zamawiajacyid">
         <state-number>188475</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="12431" parent="3559" name="dishorderid">
+      <column id="12432" parent="3559" name="dishorderid">
         <state-number>188475</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="12432" parent="3559" name="momentzamowienia">
+      <column id="12433" parent="3559" name="momentzamowienia">
         <state-number>188475</state-number>
         <data-type>date</data-type>
       </column>
-      <index id="12433" parent="3559" name="logzamowien_pkey">
+      <index id="12434" parent="3559" name="logzamowien_pkey">
         <object-id>48163</object-id>
         <columns>logzamowienid</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="12434" parent="3559" name="logzamowien_pkey">
+      <key id="12435" parent="3559" name="logzamowien_pkey">
         <columns>logzamowienid</columns>
         <underlying-index>logzamowien_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="12435" parent="3560" name="personid">
+      <column id="12436" parent="3560" name="personid">
         <state-number>182273</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;person_personid_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="12436" parent="3560" name="name">
+      <column id="12437" parent="3560" name="name">
         <state-number>182273</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="12437" parent="3560" name="telefon">
+      <column id="12438" parent="3560" name="telefon">
         <state-number>188488</state-number>
         <data-type>text</data-type>
       </column>
-      <index id="12438" parent="3560" name="person_pkey">
+      <index id="12439" parent="3560" name="person_pkey">
         <object-id>46895</object-id>
         <columns>personid</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="12439" parent="3560" name="person_pkey">
+      <key id="12440" parent="3560" name="person_pkey">
         <columns>personid</columns>
         <underlying-index>person_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="12440" parent="3561" name="pidetailid">
+      <column id="12441" parent="3561" name="pidetailid">
         <state-number>182200</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;pidetail_pidetailid_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="12441" parent="3561" name="pizzaid">
+      <column id="12442" parent="3561" name="pizzaid">
         <state-number>182200</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="12442" parent="3561" name="nazwaskladnika">
+      <column id="12443" parent="3561" name="nazwaskladnika">
         <state-number>182200</state-number>
         <data-type>text</data-type>
       </column>
-      <index id="12443" parent="3561" name="pidetail_pkey">
+      <index id="12444" parent="3561" name="pidetail_pkey">
         <object-id>46829</object-id>
         <columns>pidetailid</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="12444" parent="3561" name="pidetail_pkey">
+      <key id="12445" parent="3561" name="pidetail_pkey">
         <columns>pidetailid</columns>
         <underlying-index>pidetail_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <foreign-key id="12445" parent="3561" name="pidetail_pizzaid_fkey">
+      <foreign-key id="12446" parent="3561" name="pidetail_pizzaid_fkey">
         <columns>pizzaid</columns>
         <ref-key>~.pizza.pizza_pkey</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="12446" parent="3562" name="pizzaid">
+      <column id="12447" parent="3562" name="pizzaid">
         <state-number>182199</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;pizza_pizzaid_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="12447" parent="3562" name="nazwa">
+      <column id="12448" parent="3562" name="nazwa">
         <state-number>182199</state-number>
         <data-type>text</data-type>
       </column>
-      <column id="12448" parent="3562" name="rozmiar">
+      <column id="12449" parent="3562" name="rozmiar">
         <state-number>182199</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="12449" parent="3562" name="cena">
+      <column id="12450" parent="3562" name="cena">
         <state-number>182199</state-number>
         <data-type>integer</data-type>
       </column>
-      <index id="12450" parent="3562" name="pizza_pkey">
+      <index id="12451" parent="3562" name="pizza_pkey">
         <object-id>46818</object-id>
         <columns>pizzaid</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="12451" parent="3562" name="pizza_pkey">
+      <key id="12452" parent="3562" name="pizza_pkey">
         <columns>pizzaid</columns>
         <underlying-index>pizza_pkey</underlying-index>
         <primary>1</primary>
