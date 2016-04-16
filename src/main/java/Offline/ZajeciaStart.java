@@ -20,18 +20,22 @@ public class ZajeciaStart {
 //        PersonRe repoOsob = ctx.getBean(PersonRe.class);
 //        for(Person p : repoOsob.findAll()) System.out.println(p);
 
-        DishOrderRe dRepo = ctx.getBean(DishOrderRe.class);
+//        DishOrderRe dRepo = ctx.getBean(DishOrderRe.class);
+//
+//        DishOrder nowe = new DishOrder();
+//        nowe.setDishid(2);
+//        nowe.setPersonid(1);
+//        nowe.setLiczba(5);
+//        nowe.setDataZamowienia(new Date());
+//        dRepo.save(nowe);
+//
+//        for(DishOrder doo : dRepo.findAll()) {
+//            System.out.println(doo);
+//        }
 
-        DishOrder nowe = new DishOrder();
-        nowe.setDishid(2);
-        nowe.setPersonid(1);
-        nowe.setLiczba(5);
-        nowe.setDataZamowienia(new Date());
-        dRepo.save(nowe);
-
-        for(DishOrder doo : dRepo.findAll()) {
-            System.out.println(doo);
-        }
+        PersonRe personRe = ctx.getBean(PersonRe.class);
+        for(Dish d : personRe.findOrderedDishesOfPerson(1))
+            System.out.println(d);
 
 
         ctx.close();
