@@ -11,6 +11,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer personid;
     String name;
+    String telefon;
 
     public Person() {}
 
@@ -18,8 +19,4 @@ public class Person {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
 }
