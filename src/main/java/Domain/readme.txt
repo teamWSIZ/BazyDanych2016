@@ -2,7 +2,7 @@
 
 Więcej przykładów konstrukcji zapytań JPA:
 http://docs.spring.io/spring-data/jpa/docs/current/reference/html/
-
+--> poszukać sekcji "Supported keywords inside method names"
 
 
 Do sprawdzenia:
