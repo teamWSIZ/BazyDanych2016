@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Wykorzystanie streamów w Java 8
+ */
 
 @Component
 public class A {
