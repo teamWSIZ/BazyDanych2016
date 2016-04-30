@@ -12,7 +12,7 @@
 
     <context:annotation-config />
     <!--Gdzie szukac Bean-ów oznaczonych przez @Component-->
-    <context:component-scan base-package="Offline"/>
+    <context:component-scan base-package="Offline, Service"/>
 
 
     <!-- Gdzie będą Bean-y typu CrudRepository -->

@@ -16,6 +16,6 @@ public class Endpoint {
     String ip;
     Integer port;
     String comment;
-    Integer endPointType;
+    Integer endPointTypeId;
     Integer hostid;
 }

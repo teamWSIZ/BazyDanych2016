@@ -1,7 +1,6 @@
 package Offline;
 
-import Domain.Host;
-import Domain.HostRe;
+import Service.CentralProcessor;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -13,17 +12,11 @@ public class ServerStart {
         ClassPathXmlApplicationContext ctx =
                 new ClassPathXmlApplicationContext("offline-config.xml");
 
-        HostRe hostRe = ctx.getBean(HostRe.class);
+        CentralProcessor processor = ctx.getBean(CentralProcessor.class);
 
-        Host nowy = new Host();
-        nowy.setName("Brama");
-        nowy.setComment("Brama sieci wewnetrznej");
-        hostRe.save(nowy);
+        processor.createNewHost("Baza", "Baza postgres");
 
-
-        for(Host h : hostRe.findAll()) {
-            System.out.println(h);
-        }
+        System.out.println(processor.getAllHosts());
 
         ctx.close();
     }
