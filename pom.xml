@@ -4,7 +4,7 @@
     <groupId>pl.edu.wsi</groupId>
     <artifactId>BazyDanych2016</artifactId>
     <packaging>war</packaging>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.1-SNAPSHOT</version>
     <name>BazyDanych2016</name>
 
     <properties>
@@ -143,7 +143,7 @@
     </dependencies>
 
     <build>
-        <finalName>BazyDanych2016</finalName>
+        <finalName>BD</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

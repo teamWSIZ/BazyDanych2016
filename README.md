@@ -20,3 +20,10 @@ konstruktor, metodę toString, equals i hashCode). Aby była właściwie pokazyw
 w IntelliJ należy doinstalować plugin do Lomboka (Settings>Plugins>BrowseRepositories>Lombok).
 
 
+### Uwaga:
+- Projekt zawiera również REST-owy kontroler; całość można zbudować będąc w główym folderze i wydając polecenie
+  `mvn clean package`; pojawia się wtedy `target/BD.war` (`mvn` to polecenie mavena; jeśli nie jest dostępne, należy mavena
+   zainstalować.)
+- `BD.war` można uruchomić na serwerze aplikacyjnym (tomcat/wildfly) lub bezpośrednio przy pomocy jetty,
+   w tym celu można wykorzystać zawarty tu jetty-runner.jar, i wydać polecenie `java -jar jetty-runner.jar --port 8081 target/BD.war`
+

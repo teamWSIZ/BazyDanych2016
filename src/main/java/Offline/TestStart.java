@@ -1,8 +1,5 @@
 package Offline;
 
-import Domain.DishRe;
-import Domain.Person;
-import Domain.PersonRe;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,9 +8,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestStart {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx =
-                new ClassPathXmlApplicationContext("offline-config.xml");
+                new ClassPathXmlApplicationContext("spring-config.xml");
 
-        DishRe repo = ctx.getBean(DishRe.class);
+//        DishRe repo = ctx.getBean(DishRe.class);
 
 //        Dish nowy = new Dish();
 //        nowy.setNazwa("Sałatka");
@@ -34,32 +31,15 @@ public class TestStart {
 //            System.out.println(d);
 //        }
 
-        PersonRe repoOsob = ctx.getBean(PersonRe.class);
+//        PersonRe repoOsob = ctx.getBean(PersonRe.class);
+//
+//        for(Person p : repoOsob.findByNameStartingWith("Kl"))
+//            System.out.println(p);
 
-        for(Person p : repoOsob.findByNameStartingWith("Kl"))
-            System.out.println(p);
 
-
-
-        ctx.close();
-    }
-    public static void smain(String[] args) {
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("offline-config.xml");
-//        PizzaRe repo = ctx.getBean(PizzaRe.class);
-//        System.out.println(repo.count());
-
-        PersonRe personRe = ctx.getBean(PersonRe.class);
-//        Random r = new Random();
-//        for (int i = 0; i < 10; i++) {
-//            Person p = new Person("Student" + String.valueOf(r.nextInt(50)));
-//            personRe.save(p);
-//        }
-
-        //Przejdzie przez kolekcję osób których `name` zawiera napis "udent" (np. "Student")
-        for(Person p : personRe.findByNameContaining("uden"))
-            System.out.println(p);
 
         ctx.close();
     }
+
 
 }

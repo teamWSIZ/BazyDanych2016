@@ -21,9 +21,6 @@
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/mdispatcher-servlet.xml</file>
         </fileset>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/offline-config.xml</file>
-        </fileset>
-        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/mdispatcher-servlet.xml</file>
         </fileset>
       </configuration>

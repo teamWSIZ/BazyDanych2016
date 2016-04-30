@@ -10,13 +10,15 @@ public class ServerStart {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx =
-                new ClassPathXmlApplicationContext("offline-config.xml");
+                new ClassPathXmlApplicationContext("spring-config.xml");
 
         CentralProcessor processor = ctx.getBean(CentralProcessor.class);
 
         processor.createNewHost("Baza", "Baza postgres");
 
         System.out.println(processor.getAllHosts());
+
+        System.out.println(processor.listHostsOfGroup(1));
 
         ctx.close();
     }

@@ -6,13 +6,14 @@
              version="2.0">
 
     <!--PersistenceUnit Student -->
-    <persistence-unit name="enginetester" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="database2016" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Klasy które będą mapowane na tabele baz danych -->
-        <class>Domain.Dish</class>
-        <class>Domain.Person</class>
-        <class>Domain.DishOrder</class>
         <class>Domain.Host</class>
+        <class>Domain.HostGroup</class>
+        <class>Domain.HostHostGroup</class>
+        <class>Domain.Endpoint</class>
+        <class>Domain.EndPointType</class>
 
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
