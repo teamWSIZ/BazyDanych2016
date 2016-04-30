@@ -12,6 +12,7 @@
         <class>Domain.Dish</class>
         <class>Domain.Person</class>
         <class>Domain.DishOrder</class>
+        <class>Domain.Host</class>
 
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
