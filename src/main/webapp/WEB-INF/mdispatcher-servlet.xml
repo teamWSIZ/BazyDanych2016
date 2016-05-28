@@ -19,11 +19,6 @@
     <jpa:repositories base-package="Domain" entity-manager-factory-ref="entityManagerFactory0">
     </jpa:repositories>
 
-
-    <jpa:repositories base-package="Domain"
-                      entity-manager-factory-ref="entityManagerFactory0">
-    </jpa:repositories>
-
     <bean id="entityManagerFactory0" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="database2016" />
     </bean>
