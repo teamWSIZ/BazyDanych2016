@@ -15,6 +15,9 @@
         <class>Domain.Endpoint</class>
         <class>Domain.EndPointType</class>
 
+        <class>vpn.Cert</class>
+        <class>vpn.User</class>
+
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://10.10.0.111:5432/student" />

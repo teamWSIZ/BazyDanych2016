@@ -13,10 +13,10 @@
                 http://www.springframework.org/schema/tx
                 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="WebController, Domain, Service"/>
+    <context:component-scan base-package="WebController, Domain, Service, vpn"/>
 
 
-    <jpa:repositories base-package="Domain" entity-manager-factory-ref="entityManagerFactory0">
+    <jpa:repositories base-package="Domain, vpn" entity-manager-factory-ref="entityManagerFactory0">
     </jpa:repositories>
 
     <bean id="entityManagerFactory0" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

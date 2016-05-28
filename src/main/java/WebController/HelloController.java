@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import vpn.CertRe;
+import vpn.User;
+import vpn.UserRe;
 
 
 @Controller
@@ -24,6 +27,12 @@ public class HelloController {
     CentralProcessor processor;
     @Autowired
     HostRe hostRepository;
+
+    @Autowired
+    UserRe userRe;
+
+    @Autowired
+    CertRe certRe;
 
     @RequestMapping(value = "/")
     @ResponseBody
@@ -55,6 +64,37 @@ public class HelloController {
         nowy.setComment(comment);
         hostRe.save(nowy);
         Rest odp = new Rest();
+        return odp;
+    }
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    @ResponseBody
+    @Transactional
+    public Rest getAllUSers() {
+        Rest odp = new Rest();
+        odp.setResult(userRe.findAll());
+
+        return odp;
+    }
+
+
+    @RequestMapping(value = "/users/add", method = RequestMethod.GET)
+    @ResponseBody
+    public Rest createUser(
+            @RequestParam(value = "name", required = false) String name) {
+        User nowy = new User();
+        nowy.setName(name);
+        userRe.save(nowy);
+        Rest odp = new Rest();
+        return odp;
+    }
+
+    @RequestMapping(value = "/certs", method = RequestMethod.GET)
+    @ResponseBody
+    @Transactional
+    public Rest getAllCerts() {
+        Rest odp = new Rest();
+        odp.setResult(certRe.findAll());
         return odp;
     }
 

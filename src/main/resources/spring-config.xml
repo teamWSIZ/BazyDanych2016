@@ -16,7 +16,7 @@
     <context:component-scan base-package="Offline, Service"/>
 
     <!-- Gdzie będą Bean-y typu CrudRepository -->
-    <jpa:repositories base-package="Domain"
+    <jpa:repositories base-package="Domain, vpn"
                       entity-manager-factory-ref="entityManagerFactory0">
     </jpa:repositories>
 

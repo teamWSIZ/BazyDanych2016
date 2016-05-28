@@ -1,7 +1,7 @@
 package Offline;
 
-import Domain.HostRe;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import vpn.UserRe;
 
 /**
  * Offline-owy tester repozytoriów.
@@ -11,14 +11,9 @@ public class TestStart {
         ClassPathXmlApplicationContext ctx =
                 new ClassPathXmlApplicationContext("spring-config.xml");
 
-        HostRe hostRe = ctx.getBean(HostRe.class);
-//        Host nowy = new Host();
-//        nowy.setName("Windows 11");
-//        nowy.setComment("Czy istnieje?");
-//        hostRe.save(nowy);
+        UserRe userRe = ctx.getBean(UserRe.class);
 
-        System.out.println(hostRe.findAll());
-
+        System.out.println(userRe.findAll());
         ctx.close();
     }
 
