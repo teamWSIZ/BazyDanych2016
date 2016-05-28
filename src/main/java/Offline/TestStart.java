@@ -1,5 +1,6 @@
 package Offline;
 
+import Domain.HostRe;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -10,33 +11,13 @@ public class TestStart {
         ClassPathXmlApplicationContext ctx =
                 new ClassPathXmlApplicationContext("spring-config.xml");
 
-//        DishRe repo = ctx.getBean(DishRe.class);
+        HostRe hostRe = ctx.getBean(HostRe.class);
+//        Host nowy = new Host();
+//        nowy.setName("Windows 11");
+//        nowy.setComment("Czy istnieje?");
+//        hostRe.save(nowy);
 
-//        Dish nowy = new Dish();
-//        nowy.setNazwa("Sałatka");
-//        nowy.setCena(10);
-//        nowy.setWersja("Duża");
-//
-//        repo.save(nowy);
-
-//        Dish dd = repo.findOne(3);
-//        dd.setWersja("0.495L");
-//        repo.save(dd);
-
-//        System.out.println(dd);
-
-
-//
-//        for(Dish d : repo.findAll()) {
-//            System.out.println(d);
-//        }
-
-//        PersonRe repoOsob = ctx.getBean(PersonRe.class);
-//
-//        for(Person p : repoOsob.findByNameStartingWith("Kl"))
-//            System.out.println(p);
-
-
+        System.out.println(hostRe.findAll());
 
         ctx.close();
     }

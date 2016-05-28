@@ -14,7 +14,7 @@ public class ServerStart {
 
         CentralProcessor processor = ctx.getBean(CentralProcessor.class);
 
-        processor.createNewHost("Baza", "Baza postgres");
+        processor.createNewHost("Switch", "Ukryty switch");
 
         System.out.println(processor.getAllHosts());
 
