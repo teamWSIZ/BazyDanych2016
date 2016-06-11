@@ -9,11 +9,9 @@
     <persistence-unit name="database2016" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Klasy które będą mapowane na tabele baz danych -->
-        <class>Domain.Host</class>
-        <class>Domain.HostGroup</class>
-        <class>Domain.HostHostGroup</class>
-        <class>Domain.Endpoint</class>
-        <class>Domain.EndPointType</class>
+        <class>model.Persona</class>
+        <class>model.Snapshot</class>
+        <class>model.Transfer</class>
 
         <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>

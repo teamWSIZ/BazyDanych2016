@@ -33,7 +33,7 @@ public class TestStart {
 
 //        PersonRe repoOsob = ctx.getBean(PersonRe.class);
 //
-//        for(Person p : repoOsob.findByNameStartingWith("Kl"))
+//        for(Persona p : repoOsob.findByNameStartingWith("Kl"))
 //            System.out.println(p);
 
 

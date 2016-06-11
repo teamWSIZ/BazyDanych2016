@@ -29,7 +29,7 @@ public class HelloController {
     @ResponseBody
     public Rest getAllHosts() {
         Rest odp = new Rest();
-        odp.setResult(processor.listHostsOfGroup(1));
+//        odp.setResult(processor.listHostsOfGroup(1));
         return odp;
     }
 

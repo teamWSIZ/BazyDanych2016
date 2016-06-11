@@ -13,12 +13,12 @@ public class ServerStart {
                 new ClassPathXmlApplicationContext("spring-config.xml");
 
         CentralProcessor processor = ctx.getBean(CentralProcessor.class);
-
-        processor.createNewHost("Baza", "Baza postgres");
-
-        System.out.println(processor.getAllHosts());
-
-        System.out.println(processor.listHostsOfGroup(1));
+//
+//        processor.createNewHost("Baza", "Baza postgres");
+//
+//        System.out.println(processor.getAllHosts());
+//
+//        System.out.println(processor.listHostsOfGroup(1));
 
         ctx.close();
     }
