@@ -24,16 +24,22 @@ public class KasaStart {
 //        System.out.println(p1);
 //        ctx.getBean(KasaService.class).transferIt(tre);
 
-        Persona nowy = new Persona();
-        nowy.setName("Rouseff");
-        nowy.setMoney(0);
-        nowy.setPass("XX");
-        pre.save(nowy);
-        System.out.println(nowy);
-        System.out.println("------------");
-        for(Persona p : pre.findAll()) {
-            System.out.println(p);
-        }
+//        Persona nowy = new Persona();
+//        nowy.setName("Rouseff");
+//        nowy.setMoney(0);
+//        nowy.setPass("XX");
+//        pre.save(nowy);
+//        System.out.println(nowy);
+//        System.out.println("------------");
+//        for(Persona p : pre.findByMoneyGreaterThanEqual(1500)) {
+//            System.out.println(p);
+//        }
+//        for(Persona p : pre.findByNameStartsWith("Rou")) {
+//            System.out.println(p);
+//        }
+
+        KasaService service = ctx.getBean(KasaService.class);
+        service.przelew(1, 5, 200);
 
         ctx.close();
     }
