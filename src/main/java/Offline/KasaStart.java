@@ -1,6 +1,7 @@
 package Offline;
 
 import Service.KasaService;
+import model.Persona;
 import model.PersonaRe;
 import model.TransferRe;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,7 +22,18 @@ public class KasaStart {
 
 //        Persona p1 = pre.findOne(1);
 //        System.out.println(p1);
-        ctx.getBean(KasaService.class).transferIt(tre);
+//        ctx.getBean(KasaService.class).transferIt(tre);
+
+        Persona nowy = new Persona();
+        nowy.setName("Rouseff");
+        nowy.setMoney(0);
+        nowy.setPass("XX");
+        pre.save(nowy);
+        System.out.println(nowy);
+        System.out.println("------------");
+        for(Persona p : pre.findAll()) {
+            System.out.println(p);
+        }
 
         ctx.close();
     }
