@@ -1,0 +1,8 @@
+todo:
+
+1) proste testy                 [OK]
+2) testy korzystające z bazy
+3) sql do kreacji bazy
+4) testy performance + transactions
+5) sql maven plugin i testy z wykorzystaniem in-memory h2
+
