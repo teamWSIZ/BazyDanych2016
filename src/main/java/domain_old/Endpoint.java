@@ -1,4 +1,4 @@
-package Domain;
+package domain_old;
 
 import lombok.Data;
 

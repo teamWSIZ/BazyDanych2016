@@ -1,6 +1,6 @@
-package Offline;
+package offline;
 
-import Service.CentralProcessor;
+import service.CentralProcessor;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

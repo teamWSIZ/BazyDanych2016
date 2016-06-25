@@ -13,14 +13,14 @@
                 http://www.springframework.org/schema/tx
                 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="WebController, Domain, Service"/>
+    <context:component-scan base-package="controller, domain_old, java.service"/>
 
 
-    <jpa:repositories base-package="Domain" entity-manager-factory-ref="entityManagerFactory0">
+    <jpa:repositories base-package="domain_old" entity-manager-factory-ref="entityManagerFactory0">
     </jpa:repositories>
 
 
-    <jpa:repositories base-package="Domain"
+    <jpa:repositories base-package="domain_old"
                       entity-manager-factory-ref="entityManagerFactory0">
     </jpa:repositories>
 

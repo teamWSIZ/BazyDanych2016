@@ -11,6 +11,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
+/**
+ * Informacje osobowe + o info o stanie konta.
+ *
+ * Wykorzystujemy też funkcjonalności typu builder Lomboka, czyli można:
+ *  Persona p = Persona.builder().name("Xinping").pass("123").money(0).build();
+ */
+
 @Data
 @Entity
 @Builder
@@ -23,5 +30,4 @@ public class Persona {
     String pass;
     String name;
     Integer money;
-
 }

@@ -1,4 +1,4 @@
-package Domain;
+package domain_old;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

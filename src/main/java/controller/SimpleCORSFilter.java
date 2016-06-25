@@ -1,4 +1,4 @@
-package WebController;
+package controller;
 
 /**
  * Created by pm on 11/2/15.

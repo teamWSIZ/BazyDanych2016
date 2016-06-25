@@ -1,4 +1,4 @@
-package Service;
+package service;
 
 
 import model.*;
@@ -25,6 +25,7 @@ public class KasaService {
         tre.save(nowy);
 
     }
+
 
     @Transactional
     public void przelew(Integer pidFrom, Integer pidTo, Integer trAmount) {
@@ -55,7 +56,6 @@ public class KasaService {
         transferTo.setTimestamp(timestampTransferu);
         tre.save(transferFrom);
         tre.save(transferTo);
-
         System.out.println("True?==" + TransactionSynchronizationManager.isActualTransactionActive());
 
 

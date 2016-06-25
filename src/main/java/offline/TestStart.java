@@ -1,9 +1,9 @@
-package Offline;
+package offline;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Offline-owy tester repozytoriów.
+ * offline-owy tester repozytoriów.
  */
 public class TestStart {
     public static void main(String[] args) {

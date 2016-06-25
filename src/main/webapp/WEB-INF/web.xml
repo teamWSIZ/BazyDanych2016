@@ -19,7 +19,7 @@
     <!-- CORS; inaczej angular nie chce akceptować odpowiedzi-->
     <filter>
         <filter-name>cors</filter-name>
-        <filter-class>WebController.SimpleCORSFilter</filter-class>
+        <filter-class>controller.SimpleCORSFilter</filter-class>
     </filter>
 
     <filter-mapping>

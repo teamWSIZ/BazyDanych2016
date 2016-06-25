@@ -1,8 +1,8 @@
-package WebController;
+package controller;
 
-import Domain.HostRe;
-import Service.CentralProcessor;
-import Service.Rest;
+import domain_old.HostRe;
+import service.CentralProcessor;
+import service.Rest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Controller
 @EnableWebMvc
-public class HelloController {
+public class HostController {
     @Autowired
     HostRe hostRe;
     @Autowired

@@ -5,6 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Zapamiętuje elementarny stan systemu w chwili czasowej `timestamp`.
+ */
 
 @Data
 @Entity

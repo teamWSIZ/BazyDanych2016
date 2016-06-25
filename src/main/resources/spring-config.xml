@@ -13,7 +13,7 @@
             http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!--Gdzie szukac Bean-ów oznaczonych przez @Component-->
-    <context:component-scan base-package="Offline, Service"/>
+    <context:component-scan base-package="offline, java.service"/>
 
     <!-- Gdzie będą Bean-y typu CrudRepository -->
     <jpa:repositories base-package="model"

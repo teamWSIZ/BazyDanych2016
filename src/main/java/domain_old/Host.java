@@ -1,4 +1,4 @@
-package Domain;
+package domain_old;
 
 import lombok.Data;
 
@@ -9,10 +9,10 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class EndPointType {
+public class Host {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer endPointTypeid;
+    Integer hostid;
     String name;
     String comment;
 }

@@ -1,6 +1,5 @@
-package Offline;
+package offline;
 
-import Service.KasaService;
 import model.Persona;
 import model.PersonaRe;
 import model.TransferRe;
@@ -31,15 +30,18 @@ public class KasaStart {
 //        pre.save(nowy);
 //        System.out.println(nowy);
 //        System.out.println("------------");
-//        for(Persona p : pre.findByMoneyGreaterThanEqual(1500)) {
-//            System.out.println(p);
-//        }
+
+        for(Persona p : pre.findByMoneyGreaterThanEqual(0)) {
+            System.out.println(p);
+        }
+
+
 //        for(Persona p : pre.findByNameStartsWith("Rou")) {
 //            System.out.println(p);
 //        }
 
-        KasaService service = ctx.getBean(KasaService.class);
-        service.przelew(1, 5, 200);
+//        KasaService java.service = ctx.getBean(KasaService.class);
+//        java.service.przelew(1, 5, 200);
 
         ctx.close();
     }
